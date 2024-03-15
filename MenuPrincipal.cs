@@ -56,7 +56,7 @@ namespace Proyecto_Compilador_de_Lain
 
         private void bttValidar_Click(object sender, EventArgs e)
         {
-            string patron = @"LAIN\s+\w+\s*=\s*(?:""(\w*)""|[-+]?\d+);";
+            string patron = @"LAIN\s+\w{1,64}\s*=\s*(?:""(\w*)""|[-+]?\d+);";
 
             MessageBox.Show("El código fuente " + (Regex.IsMatch(codigoFuente.Contenido, patron)? "" : "NO") + " es válido.");
         }
