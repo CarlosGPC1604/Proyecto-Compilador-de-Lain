@@ -30,6 +30,10 @@
         {
             bttCerrar = new Button();
             dialogoAbrirArchivo = new OpenFileDialog();
+            bttSeleccionarArchivo = new Button();
+            bttValidar = new Button();
+            bttLimpiar = new Button();
+            bttVerCodigo = new Button();
             SuspendLayout();
             // 
             // bttCerrar
@@ -50,6 +54,56 @@
             // 
             dialogoAbrirArchivo.FileName = "codigoFuente";
             // 
+            // bttSeleccionarArchivo
+            // 
+            bttSeleccionarArchivo.FlatStyle = FlatStyle.Flat;
+            bttSeleccionarArchivo.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            bttSeleccionarArchivo.ForeColor = Color.White;
+            bttSeleccionarArchivo.Location = new Point(96, 297);
+            bttSeleccionarArchivo.Name = "bttSeleccionarArchivo";
+            bttSeleccionarArchivo.Size = new Size(157, 41);
+            bttSeleccionarArchivo.TabIndex = 1;
+            bttSeleccionarArchivo.Text = "Agregar archivo";
+            bttSeleccionarArchivo.UseVisualStyleBackColor = true;
+            bttSeleccionarArchivo.Click += bttSeleccionarArchivo_Click;
+            // 
+            // bttValidar
+            // 
+            bttValidar.FlatStyle = FlatStyle.Flat;
+            bttValidar.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            bttValidar.ForeColor = Color.White;
+            bttValidar.Location = new Point(297, 297);
+            bttValidar.Name = "bttValidar";
+            bttValidar.Size = new Size(157, 41);
+            bttValidar.TabIndex = 1;
+            bttValidar.Text = "Validar";
+            bttValidar.UseVisualStyleBackColor = true;
+            bttValidar.Click += bttValidar_Click;
+            // 
+            // bttLimpiar
+            // 
+            bttLimpiar.FlatStyle = FlatStyle.Flat;
+            bttLimpiar.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            bttLimpiar.ForeColor = Color.White;
+            bttLimpiar.Location = new Point(491, 297);
+            bttLimpiar.Name = "bttLimpiar";
+            bttLimpiar.Size = new Size(157, 41);
+            bttLimpiar.TabIndex = 1;
+            bttLimpiar.Text = "Limpiar";
+            bttLimpiar.UseVisualStyleBackColor = true;
+            // 
+            // bttVerCodigo
+            // 
+            bttVerCodigo.FlatStyle = FlatStyle.Flat;
+            bttVerCodigo.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            bttVerCodigo.ForeColor = Color.White;
+            bttVerCodigo.Location = new Point(96, 368);
+            bttVerCodigo.Name = "bttVerCodigo";
+            bttVerCodigo.Size = new Size(157, 41);
+            bttVerCodigo.TabIndex = 1;
+            bttVerCodigo.Text = "Ver código";
+            bttVerCodigo.UseVisualStyleBackColor = true;
+            // 
             // MenuPrincipal
             // 
             AutoScaleDimensions = new SizeF(120F, 120F);
@@ -57,6 +111,10 @@
             BackColor = Color.FromArgb(22, 14, 18);
             ClientSize = new Size(800, 450);
             ControlBox = false;
+            Controls.Add(bttVerCodigo);
+            Controls.Add(bttLimpiar);
+            Controls.Add(bttValidar);
+            Controls.Add(bttSeleccionarArchivo);
             Controls.Add(bttCerrar);
             Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.None;
@@ -75,5 +133,9 @@
 
         private Button bttCerrar;
         private OpenFileDialog dialogoAbrirArchivo;
+        private Button bttSeleccionarArchivo;
+        private Button bttValidar;
+        private Button bttLimpiar;
+        private Button bttVerCodigo;
     }
 }
