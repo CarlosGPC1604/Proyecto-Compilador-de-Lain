@@ -58,7 +58,7 @@
             // 
             bttSeleccionarArchivo.FlatStyle = FlatStyle.Flat;
             bttSeleccionarArchivo.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            bttSeleccionarArchivo.ForeColor = Color.White;
+            bttSeleccionarArchivo.ForeColor = Color.FromArgb(203, 166, 174);
             bttSeleccionarArchivo.Location = new Point(96, 297);
             bttSeleccionarArchivo.Name = "bttSeleccionarArchivo";
             bttSeleccionarArchivo.Size = new Size(157, 41);
@@ -71,7 +71,7 @@
             // 
             bttValidar.FlatStyle = FlatStyle.Flat;
             bttValidar.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            bttValidar.ForeColor = Color.White;
+            bttValidar.ForeColor = Color.FromArgb(203, 166, 174);
             bttValidar.Location = new Point(297, 297);
             bttValidar.Name = "bttValidar";
             bttValidar.Size = new Size(157, 41);
@@ -84,7 +84,7 @@
             // 
             bttLimpiar.FlatStyle = FlatStyle.Flat;
             bttLimpiar.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            bttLimpiar.ForeColor = Color.White;
+            bttLimpiar.ForeColor = Color.FromArgb(203, 166, 174);
             bttLimpiar.Location = new Point(491, 297);
             bttLimpiar.Name = "bttLimpiar";
             bttLimpiar.Size = new Size(157, 41);
@@ -96,7 +96,7 @@
             // 
             bttVerCodigo.FlatStyle = FlatStyle.Flat;
             bttVerCodigo.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            bttVerCodigo.ForeColor = Color.White;
+            bttVerCodigo.ForeColor = Color.FromArgb(203, 166, 174);
             bttVerCodigo.Location = new Point(96, 368);
             bttVerCodigo.Name = "bttVerCodigo";
             bttVerCodigo.Size = new Size(157, 41);
