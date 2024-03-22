@@ -34,6 +34,12 @@
             bttValidar = new Button();
             bttLimpiar = new Button();
             bttVerCodigo = new Button();
+            menuStrip1 = new MenuStrip();
+            inicioToolStripMenuItem = new ToolStripMenuItem();
+            archivoToolStripMenuItem = new ToolStripMenuItem();
+            archivoToolStripMenuItem1 = new ToolStripMenuItem();
+            outConsole = new WindowsForms.Console.FConsole();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // bttCerrar
@@ -42,7 +48,7 @@
             bttCerrar.FlatAppearance.BorderSize = 3;
             bttCerrar.FlatStyle = FlatStyle.Flat;
             bttCerrar.ForeColor = Color.FromArgb(203, 166, 174);
-            bttCerrar.Location = new Point(723, 12);
+            bttCerrar.Location = new Point(723, 46);
             bttCerrar.Name = "bttCerrar";
             bttCerrar.Size = new Size(65, 56);
             bttCerrar.TabIndex = 0;
@@ -104,6 +110,56 @@
             bttVerCodigo.Text = "Ver código";
             bttVerCodigo.UseVisualStyleBackColor = true;
             // 
+            // menuStrip1
+            // 
+            menuStrip1.ImageScalingSize = new Size(20, 20);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { inicioToolStripMenuItem, archivoToolStripMenuItem1 });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(800, 28);
+            menuStrip1.TabIndex = 2;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // inicioToolStripMenuItem
+            // 
+            inicioToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { archivoToolStripMenuItem });
+            inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
+            inicioToolStripMenuItem.Size = new Size(59, 24);
+            inicioToolStripMenuItem.Text = "Inicio";
+            // 
+            // archivoToolStripMenuItem
+            // 
+            archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
+            archivoToolStripMenuItem.Size = new Size(121, 26);
+            archivoToolStripMenuItem.Text = "Salir";
+            // 
+            // archivoToolStripMenuItem1
+            // 
+            archivoToolStripMenuItem1.Name = "archivoToolStripMenuItem1";
+            archivoToolStripMenuItem1.Size = new Size(73, 24);
+            archivoToolStripMenuItem1.Text = "Archivo";
+            // 
+            // outConsole
+            // 
+            outConsole.AutoScrollToEndLine = true;
+            outConsole.BackColor = Color.Black;
+            outConsole.BorderStyle = BorderStyle.None;
+            outConsole.Font = new Font("Consolas", 10F);
+            outConsole.ForeColor = Color.FromArgb(223, 216, 194);
+            outConsole.HyperlinkColor = Color.Empty;
+            outConsole.Location = new Point(96, 46);
+            outConsole.MaxLength = 32767;
+            outConsole.MinimumSize = new Size(470, 200);
+            outConsole.Name = "outConsole";
+            outConsole.ReadOnly = true;
+            outConsole.ScrollBars = RichTextBoxScrollBars.Vertical;
+            outConsole.SecureReadLine = true;
+            outConsole.Size = new Size(552, 229);
+            outConsole.State = WindowsForms.Console.Enums.ConsoleState.Writing;
+            outConsole.TabIndex = 5;
+            outConsole.Text = "";
+            outConsole.Title = "Proyecto - Parcial 2";
+            // 
             // MenuPrincipal
             // 
             AutoScaleDimensions = new SizeF(120F, 120F);
@@ -111,13 +167,16 @@
             BackColor = Color.FromArgb(22, 14, 18);
             ClientSize = new Size(800, 450);
             ControlBox = false;
+            Controls.Add(outConsole);
             Controls.Add(bttVerCodigo);
             Controls.Add(bttLimpiar);
             Controls.Add(bttValidar);
             Controls.Add(bttSeleccionarArchivo);
             Controls.Add(bttCerrar);
+            Controls.Add(menuStrip1);
             Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.None;
+            MainMenuStrip = menuStrip1;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "MenuPrincipal";
@@ -126,7 +185,10 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Proyecto - Parcial 2";
             Load += MenuPrincipal_Load;
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -137,5 +199,10 @@
         private Button bttValidar;
         private Button bttLimpiar;
         private Button bttVerCodigo;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem inicioToolStripMenuItem;
+        private ToolStripMenuItem archivoToolStripMenuItem;
+        private ToolStripMenuItem archivoToolStripMenuItem1;
+        private WindowsForms.Console.FConsole outConsole;
     }
 }
