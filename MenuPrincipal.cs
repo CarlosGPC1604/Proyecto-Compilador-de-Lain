@@ -23,7 +23,10 @@ namespace Proyecto_Compilador_de_Lain
 
         private void MenuPrincipal_Load(object sender, EventArgs e)
         {
-            outConsole.WriteLine("¡Bienvenido!");
+            for (int i = 0; i < 20; i++)
+            {
+                outConsole.WriteLine("¡Bienvenido!");
+            }
         }
 
         private void bttCerrar_Click(object sender, EventArgs e)
@@ -56,12 +59,28 @@ namespace Proyecto_Compilador_de_Lain
 
         private void bttValidar_Click(object sender, EventArgs e)
         {
-            string patron = @"LAIN\s+\w{1,64}\s*=\s*(?:""(\w*)""|[-+]?\d+);";
+            if(this.codigoFuente == null || this.codigoFuente.Contenido == null)
+            {
+                errorProviderArchivo.SetError(this.bttValidar, "Debes seleccionar antes un archivo.");
+                errorProviderArchivo.SetIconPadding(this.bttValidar, 6);
+                return;
+            }
 
+            string patron = @"LAIN\s+\w{1,64}\s*=\s*(?:""(\w*)""|[-+]?\d+);";
             MessageBox.Show("El código fuente " + (Regex.IsMatch(codigoFuente.Contenido, patron) ? "" : "NO") + " es válido.");
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void archivoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void bttLimpiar_Click(object sender, EventArgs e)
         {
 
         }
